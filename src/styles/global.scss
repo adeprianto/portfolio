@@ -1,0 +1,244 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Font face for Pulp-Display
+@font-face {
+  font-family: Pulp-Display;
+  font-weight: 200;
+  src: local('Pulp-Display'), url(/assets/fonts/pulp-display/pulp-display-extralight.woff2) format("woff");
+}
+
+@font-face {
+  font-family: Pulp-Display;
+  font-weight: 200;
+  font-style: italic;
+  src: local('Pulp-Display'), url(/assets/fonts/pulp-display/pulp-display-extralight-italic.woff2) format("woff");
+}
+
+@font-face {
+  font-family: Pulp-Display;
+  font-weight: 300;
+  src: local('Pulp-Display'), url(/assets/fonts/pulp-display/pulp-display-light.woff2) format("woff");
+}
+
+@font-face {
+  font-family: Pulp-Display;
+  font-weight: 300;
+  font-style: italic;
+  src: local('Pulp-Display'), url(/assets/fonts/pulp-display/pulp-display-light-italic.woff2) format("woff");
+}
+
+@font-face {
+  font-family: Pulp-Display;
+  font-weight: 400;
+  src: local('Pulp-Display'), url(/assets/fonts/pulp-display/pulp-display-regular.woff2) format("woff");
+}
+
+@font-face {
+  font-family: Pulp-Display;
+  font-weight: 400;
+  font-style: italic;
+  src: local('Pulp-Display'), url(/assets/fonts/pulp-display/pulp-display-regular-italic.woff2) format("woff");
+}
+
+@font-face {
+  font-family: Pulp-Display;
+  font-weight: 500;
+  src: local('Pulp-Display'), url(/assets/fonts/pulp-display/pulp-display-medium.woff2) format("woff");
+}
+
+@font-face {
+  font-family: Pulp-Display;
+  font-weight: 500;
+  font-style: italic;
+  src: local('Pulp-Display'), url(/assets/fonts/pulp-display/pulp-display-medium-italic.woff2) format("woff");
+}
+
+@font-face {
+  font-family: Pulp-Display;
+  font-weight: 600;
+  src: local('Pulp-Display'), url(/assets/fonts/pulp-display/pulp-display-semibold.woff2) format("woff");
+}
+
+@font-face {
+  font-family: Pulp-Display;
+  font-weight: 600;
+  font-style: italic;
+  src: local('Pulp-Display'), url(/assets/fonts/pulp-display/pulp-display-semibold-italic.woff2) format("woff");
+}
+
+@font-face {
+  font-family: Pulp-Display;
+  font-weight: 700;
+  src: local('Pulp-Display'), url(/assets/fonts/pulp-display/pulp-display-bold.woff2) format("woff");
+}
+
+@font-face {
+  font-family: Pulp-Display;
+  font-weight: 700;
+  font-style: italic;
+  src: local('Pulp-Display'), url(/assets/fonts/pulp-display/pulp-display-bold-italic.woff2) format("woff");
+}
+
+@font-face {
+  font-family: Pulp-Display;
+  font-weight: 800;
+  src: local('Pulp-Display'), url(/assets/fonts/pulp-display/pulp-display-extrabold.woff2) format("woff");
+}
+
+@font-face {
+  font-family: Pulp-Display;
+  font-weight: 800;
+  font-style: italic;
+  src: local('Pulp-Display'), url(/assets/fonts/pulp-display/pulp-display-extrabold-italic.woff2) format("woff");
+}
+
+// Font face for SF-Mono
+@font-face {
+  font-family: SF-Mono;
+  font-weight: 300;
+  src: local('SF-Mono'), url(/assets/fonts/sf-mono/sf-mono-light.woff2) format("woff");
+}
+
+@font-face {
+  font-family: SF-Mono;
+  font-weight: 300;
+  font-style: italic;
+  src: local('SF-Mono'), url(/assets/fonts/sf-mono/sf-mono-light-italic.woff2) format("woff");
+}
+
+@font-face {
+  font-family: SF-Mono;
+  font-weight: 400;
+  src: local('SF-Mono'), url(/assets/fonts/sf-mono/sf-mono-regular.woff2) format("woff");
+}
+
+@font-face {
+  font-family: SF-Mono;
+  font-weight: 400;
+  font-style: italic;
+  src: local('SF-Mono'), url(/assets/fonts/sf-mono/sf-mono-regular-italic.woff2) format("woff");
+}
+
+@font-face {
+  font-family: SF-Mono;
+  font-weight: 500;
+  src: local('SF-Mono'), url(/assets/fonts/sf-mono/sf-mono-medium.woff2) format("woff");
+}
+
+@font-face {
+  font-family: SF-Mono;
+  font-weight: 500;
+  font-style: italic;
+  src: local('SF-Mono'), url(/assets/fonts/sf-mono/sf-mono-medium-italic.woff2) format("woff");
+}
+
+@font-face {
+  font-family: SF-Mono;
+  font-weight: 600;
+  src: local('SF-Mono'), url(/assets/fonts/sf-mono/sf-mono-semibold.woff2) format("woff");
+}
+
+@font-face {
+  font-family: SF-Mono;
+  font-weight: 600;
+  font-style: italic;
+  src: local('SF-Mono'), url(/assets/fonts/sf-mono/sf-mono-semibold-italic.woff2) format("woff");
+}
+
+@font-face {
+  font-family: SF-Mono;
+  font-weight: 700;
+  src: local('SF-Mono'), url(/assets/fonts/sf-mono/sf-mono-bold.woff2) format("woff");
+}
+
+@font-face {
+  font-family: SF-Mono;
+  font-weight: 700;
+  font-style: italic;
+  src: local('SF-Mono'), url(/assets/fonts/sf-mono/sf-mono-bold-italic.woff2) format("woff");
+}
+
+@font-face {
+  font-family: SF-Mono;
+  font-weight: 800;
+  src: local('SF-Mono'), url(/assets/fonts/sf-mono/sf-mono-extrabold.woff2) format("woff");
+}
+
+@font-face {
+  font-family: SF-Mono;
+  font-weight: 800;
+  font-style: italic;
+  src: local('SF-Mono'), url(/assets/fonts/sf-mono/sf-mono-extrabold-italic.woff2) format("woff");
+}
+
+@layer base {
+  html {
+    @apply font-body-medium font-pulp-display text-white bg-background;
+  }
+}
+
+@layer utilities {
+  .font-body-small {
+    @apply text-body-small leading-body-small tracking-body-small;
+  }
+
+  .font-body-medium {
+    @apply text-body-medium leading-body-medium tracking-body-medium;
+  }
+
+  .font-body-large {
+    @apply text-body-large leading-body-large tracking-body-large;
+  }
+
+  .font-label-small {
+    @apply text-label-small leading-label-small tracking-label-small;
+  }
+
+  .font-label-medium {
+    @apply text-label-medium leading-label-medium tracking-label-medium;
+  }
+
+  .font-label-large {
+    @apply text-label-large leading-label-large tracking-label-large;
+  }
+
+  .font-title-small {
+    @apply text-title-small leading-title-small tracking-title-small;
+  }
+
+  .font-title-medium {
+    @apply text-title-medium leading-title-medium tracking-title-medium;
+  }
+
+  .font-title-large {
+    @apply text-title-large leading-title-large tracking-title-large;
+  }
+
+  .font-headline-small {
+    @apply text-headline-small leading-headline-small tracking-headline-small;
+  }
+
+  .font-headline-medium {
+    @apply text-headline-medium leading-headline-medium tracking-headline-medium;
+  }
+
+  .font-headline-large {
+    @apply text-headline-large leading-headline-large tracking-headline-large;
+  }
+
+  .font-display-small {
+    @apply text-display-small leading-display-small tracking-display-small;
+  }
+
+  .font-display-medium {
+    @apply text-display-medium leading-display-medium tracking-display-medium;
+  }
+
+  .font-display-large {
+    @apply text-display-large leading-display-large tracking-display-large;
+  }
+}
+
+
