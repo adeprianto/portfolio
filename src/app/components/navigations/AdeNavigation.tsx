@@ -68,7 +68,7 @@ const AdeNavigation: React.FunctionComponent = () => {
             "bg-navigation transition duration-300 md:bg-transparent",
             "fixed bottom-0 left-0 right-0 top-0 z-10 md:static",
             "h-screen w-screen md:h-auto md:w-auto",
-            "mx-6 md:py-8",
+            "md:mx-6 md:py-8",
             "flex flex-col items-center justify-center space-y-10 md:flex-row md:space-x-6 md:space-y-0",
             "md:translate-y-0",
             !isNavOpen && "-translate-y-full",
