@@ -19,6 +19,11 @@ const eslintConfig = [
   ),
   {
     rules: {
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        { argsIgnorePattern: "^_" },
+      ],
+      "@typescript-eslint/no-explicit-any": "warn",
       "react/react-in-jsx-scope": "off",
       "tailwindcss/no-custom-classname": "off",
     },

@@ -71,7 +71,7 @@ export default {
         yellow: "#F2C94C",
         blue: "#3E7ED2",
         white: "#FFFFFF",
-        border: "#79747E",
+        outline: "#79747E",
       },
     },
   },
