@@ -54,7 +54,7 @@ const AdeNavigation: React.FunctionComponent = () => {
         className={classNames([
           "mx-auto",
           "md:flex md:items-center md:justify-between",
-          "w-screen sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl",
+          "w-screen sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl",
         ])}
       >
         <div className="mx-6">

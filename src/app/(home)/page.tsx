@@ -1,5 +1,6 @@
 import AboutSection from "@/app/(home)/(sections)/AboutSection";
-import HomeSection from "@/app/(home)/(sections)/HomeSections";
+import ExperienceSection from "@/app/(home)/(sections)/ExperienceSection";
+import HomeSection from "@/app/(home)/(sections)/HomeSection";
 import AdeNavigation from "@/app/components/navigations/AdeNavigation";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <AdeNavigation />
       <HomeSection />
       <AboutSection />
+      <ExperienceSection />
     </>
   );
 }

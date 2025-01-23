@@ -1,11 +1,12 @@
 import classNames from "classnames";
 import Image from "next/image";
 
-export default function AboutSection() {
+export default function ExperienceSection() {
   return (
     <section
       className={classNames([
-        "w-screen sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl",
+        "mt-40 xl:mt-60",
+        "w-screen sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl",
         "mx-auto",
       ])}
     >
@@ -23,8 +24,8 @@ export default function AboutSection() {
         {/*<div className="h-16 bg-blue"></div>*/}
         {/*<div className="h-16 bg-blue"></div>*/}
         <div className="col-span-4 flex items-center justify-center gap-4 lg:col-span-4 lg:col-start-2 xl:col-span-5 xl:col-start-3">
-          <span className="font-sf-mono text-title-large font-bold text-pink">
-            01. About Me
+          <span className="font-sf-mono text-title-large font-bold text-yellow">
+            02. Experience
           </span>
           <div className="h-0.5 grow bg-white"></div>
         </div>
