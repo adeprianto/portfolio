@@ -5,30 +5,19 @@ export default function AboutSection() {
   return (
     <section
       className={classNames([
+        "mt-40 lg:mt-0",
         "w-screen sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl",
         "mx-auto",
       ])}
     >
       <div className="mx-6 grid grid-cols-4 gap-6 lg:grid-cols-8 xl:grid-cols-12">
-        {/*<div className="h-16 bg-blue"></div>*/}
-        {/*<div className="h-16 bg-blue"></div>*/}
-        {/*<div className="h-16 bg-blue"></div>*/}
-        {/*<div className="h-16 bg-blue"></div>*/}
-        {/*<div className="h-16 bg-blue"></div>*/}
-        {/*<div className="h-16 bg-blue"></div>*/}
-        {/*<div className="h-16 bg-blue"></div>*/}
-        {/*<div className="h-16 bg-blue"></div>*/}
-        {/*<div className="h-16 bg-blue"></div>*/}
-        {/*<div className="h-16 bg-blue"></div>*/}
-        {/*<div className="h-16 bg-blue"></div>*/}
-        {/*<div className="h-16 bg-blue"></div>*/}
         <div className="col-span-4 flex items-center justify-center gap-4 lg:col-span-4 lg:col-start-2 xl:col-span-5 xl:col-start-3">
           <span className="font-sf-mono text-title-large font-bold text-pink">
             01. About Me
           </span>
           <div className="h-0.5 grow bg-white"></div>
         </div>
-        <div className="col-span-4 mt-6 space-y-4 text-justify lg:col-span-4 lg:col-start-2 xl:col-span-5 xl:col-start-3">
+        <div className="col-span-4 mt-6 space-y-4 lg:col-span-4 lg:col-start-2 xl:col-span-5 xl:col-start-3">
           <p>
             I am a passionate software engineer dedicated to creating
             applications that not only deliver robust functionality but also

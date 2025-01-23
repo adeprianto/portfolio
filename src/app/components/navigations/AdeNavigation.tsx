@@ -1,8 +1,8 @@
 "use client";
 
-import AdeHamburgerMenu from "@/app/components/icons/AdeHamburgerMenu";
-import AdeLogo from "@/app/components/logos/AdeLogo";
-import useScrollPosition from "@/hooks/useScrollPosition";
+import AdeHamburgerMenu from "@src/app/components/icons/AdeHamburgerMenu";
+import AdeLogo from "@src/app/components/logos/AdeLogo";
+import useScrollPosition from "@src/hooks/useScrollPosition";
 import classNames from "classnames";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";

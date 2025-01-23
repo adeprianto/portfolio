@@ -1,6 +1,6 @@
 "use client";
 
-import TerminalContainer from "@/app/components/container/TerminalContainer";
+import TerminalContainer from "@src/app/components/container/TerminalContainer";
 import classNames from "classnames";
 import { useEffect, useRef } from "react";
 import TypeIt from "typeit";
