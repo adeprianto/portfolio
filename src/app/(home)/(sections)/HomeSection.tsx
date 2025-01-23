@@ -94,7 +94,7 @@ export default function HomeSection() {
     <section
       className={classNames([
         "mt-40 lg:mt-0",
-        "flex min-h-screen w-screen items-center justify-center sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl",
+        "flex w-screen items-center justify-center sm:max-w-screen-sm md:max-w-screen-md lg:min-h-screen lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl",
         "mx-auto",
       ])}
     >

@@ -60,7 +60,8 @@ export default function ExperienceSection() {
             <div
               className={classNames([
                 "flex min-w-64 items-center justify-center",
-                "border-b-2 p-4 active:bg-white/25 active:text-blue",
+                "border-b-2 p-4",
+                "cursor-pointer transition hover:bg-white/25 hover:text-blue active:bg-white/25 active:text-blue",
                 "lg:min-w-0 lg:justify-start lg:border-b-0 lg:border-l-2",
                 selectedJobExperience === JobExperience.FCT
                   ? "border-blue text-blue"
@@ -73,7 +74,8 @@ export default function ExperienceSection() {
             <div
               className={classNames([
                 "flex min-w-64 items-center justify-center",
-                "border-b-2 p-4 active:bg-white/25 active:text-blue",
+                "border-b-2 p-4",
+                "cursor-pointer transition hover:bg-white/25 hover:text-blue active:bg-white/25 active:text-blue",
                 "lg:min-w-0 lg:justify-start lg:border-b-0 lg:border-l-2",
                 selectedJobExperience === JobExperience.DBMPR
                   ? "border-blue text-blue"
@@ -86,7 +88,8 @@ export default function ExperienceSection() {
             <div
               className={classNames([
                 "flex min-w-64 items-center justify-center",
-                "border-b-2 p-4 active:bg-white/25 active:text-blue",
+                "border-b-2 p-4",
+                "cursor-pointer transition hover:bg-white/25 hover:text-blue active:bg-white/25 active:text-blue",
                 "lg:min-w-0 lg:justify-start lg:border-b-0 lg:border-l-2",
                 selectedJobExperience === JobExperience.SCCIC
                   ? "border-blue text-blue"
@@ -99,7 +102,8 @@ export default function ExperienceSection() {
             <div
               className={classNames([
                 "flex min-w-64 items-center justify-center",
-                "border-b-2 p-4 active:bg-white/25 active:text-blue",
+                "border-b-2 p-4",
+                "cursor-pointer transition hover:bg-white/25 hover:text-blue active:bg-white/25 active:text-blue",
                 "lg:min-w-0 lg:justify-start lg:border-b-0 lg:border-l-2",
                 selectedJobExperience === JobExperience.INDIHEALTH
                   ? "border-blue text-blue"
