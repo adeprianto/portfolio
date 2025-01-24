@@ -5,7 +5,7 @@ export default function ProjectSection() {
   return (
     <section
       className={classNames([
-        "mt-40",
+        "mt-40 xl:mt-56 2xl:mt-72",
         "w-screen sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl",
         "mx-auto",
       ])}
@@ -17,7 +17,7 @@ export default function ProjectSection() {
           </span>
           <div className="h-0.5 grow bg-white"></div>
         </div>
-        <div className="col-span-4 mt-6 space-y-8 lg:col-span-6 lg:col-start-2 xl:col-span-8 xl:col-start-3">
+        <div className="col-span-4 mt-6 space-y-16 md:space-y-24 lg:col-span-6 lg:col-start-2 xl:col-span-8 xl:col-start-3">
           <ItemProject
             imgSrc="/assets/images/nagari-1.png"
             title="Nagari"

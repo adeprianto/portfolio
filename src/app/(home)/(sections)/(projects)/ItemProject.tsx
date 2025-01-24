@@ -16,10 +16,10 @@ export default function ItemProject({
   techStack,
 }: ItemProjectProps) {
   return (
-    <div className="overflow-hidden rounded md:grid md:grid-cols-5">
+    <div className="gap-8 overflow-hidden rounded-lg md:grid md:grid-cols-5">
       <div
         className={classNames([
-          "relative md:col-span-2",
+          "relative md:col-span-2 md:overflow-hidden md:rounded-lg",
           reverse ? "md:order-last" : "md:order-first",
         ])}
       >
@@ -31,7 +31,7 @@ export default function ItemProject({
       </div>
       <div
         className={classNames([
-          "bg-navigation p-4 md:col-span-3 md:bg-transparent",
+          "bg-navigation p-4 md:col-span-3 md:bg-transparent md:p-0",
           reverse ? "md:order-first" : "md:order-last",
         ])}
       >
