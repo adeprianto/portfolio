@@ -175,11 +175,15 @@
 
 @layer base {
   html {
-    @apply font-body-medium font-pulp-display text-white bg-background;
+    @apply font-body-medium xl:font-body-large font-pulp-display text-white bg-background;
   }
 }
 
 @layer utilities {
+  .shadow-button {
+    box-shadow: 10px 10px;
+  }
+
   .font-body-small {
     @apply text-body-small leading-body-small tracking-body-small;
   }
