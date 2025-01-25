@@ -1,6 +1,6 @@
-import ItemJobDescription from "@src/app/(home)/(sections)/(experience)/ItemJobDescription";
+import ItemJobDescription from "@src/app/(home)/(sections)/(experience)/(content)/ItemJobDescription";
 
-export default function ItemDbmprJob() {
+export default function ContentDbmprJob() {
   return (
     <div className="space-y-2">
       <div className="flex flex-col space-y-2 sm:flex-row sm:items-start sm:justify-start sm:space-x-2 sm:space-y-0">
@@ -15,7 +15,7 @@ export default function ItemDbmprJob() {
         </h1>
       </div>
       <span className="mb-2 block font-sf-mono">January 2022 - Present</span>
-      <div className="space-y-4 p-4">
+      <ul className="space-y-4 p-4">
         <ItemJobDescription>
           Designing and developing high-quality, reliable, and user-centric web
           and mobile applications tailored to streamline work processes and
@@ -36,7 +36,7 @@ export default function ItemDbmprJob() {
           workflows and to address technical issues promptly to minimize
           downtime.
         </ItemJobDescription>
-      </div>
+      </ul>
     </div>
   );
 }

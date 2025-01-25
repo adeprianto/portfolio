@@ -9,11 +9,11 @@ export default function ItemJobDescription({
   children,
 }: ItemJobDescriptionProps) {
   return (
-    <div className="flex justify-start space-x-4">
+    <li className="flex justify-start space-x-4">
       <div className="size-4">
         <IconListItem />
       </div>
       <p>{children}</p>
-    </div>
+    </li>
   );
 }

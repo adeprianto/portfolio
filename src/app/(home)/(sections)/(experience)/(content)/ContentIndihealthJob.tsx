@@ -1,6 +1,6 @@
-import ItemJobDescription from "@src/app/(home)/(sections)/(experience)/ItemJobDescription";
+import ItemJobDescription from "@src/app/(home)/(sections)/(experience)/(content)/ItemJobDescription";
 
-export default function ItemIndihealthJob() {
+export default function ContentIndihealthJob() {
   return (
     <div className="space-y-2">
       <div className="flex flex-col space-y-2 sm:flex-row sm:items-start sm:justify-start sm:space-x-2 sm:space-y-0">
@@ -17,7 +17,7 @@ export default function ItemIndihealthJob() {
       <span className="mb-2 block font-sf-mono">
         August 2020 - December 2020
       </span>
-      <div className="space-y-4 p-4">
+      <ul className="space-y-4 p-4">
         <ItemJobDescription>
           Developing interactive mobile android apps to make a telemedicine
           system that can connect users with health practitioners, this
@@ -29,7 +29,7 @@ export default function ItemIndihealthJob() {
           problems and compose solutions according to stakeholder business
           requirements.
         </ItemJobDescription>
-      </div>
+      </ul>
     </div>
   );
 }
