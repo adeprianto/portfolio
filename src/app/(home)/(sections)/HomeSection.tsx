@@ -1,5 +1,6 @@
 "use client";
 
+import AnimationContainer from "@src/app/components/container/AnimationContainer";
 import TerminalContainer from "@src/app/components/container/TerminalContainer";
 import classNames from "classnames";
 import { useEffect, useRef } from "react";
@@ -100,32 +101,42 @@ export default function HomeSection() {
     >
       <div className="mx-6 grid grid-cols-4 gap-6 lg:grid-cols-8 xl:grid-cols-12">
         <div className="col-span-4 lg:col-span-3 lg:col-start-2 xl:col-span-5 xl:col-start-2">
-          <span className="text-yellow">Hi, my name is</span>
-          <h1 className="font-display-medium mt-8 font-bold">
-            Ade Prianto
-            <span className="text-pink">.</span>
-          </h1>
-          <h1 className="font-display-medium font-bold">
-            I creating things for the <span className="text-blue">web</span> and
-            <span className="text-green"> mobile</span>.
-          </h1>
-          <p className="mt-8">
-            I am a versatile software engineer with a strong focus on web and
-            mobile development. My journey in tech has been driven by a love for
-            building efficient, user-friendly applications. Beside development,
-            I am also deeply interested in the field of data science, spending
-            my time learning about machine learning and data analytics.
-          </p>
+          <AnimationContainer>
+            <span className="text-yellow">Hi, my name is</span>
+          </AnimationContainer>
+          <AnimationContainer>
+            <h1 className="font-display-medium mt-8 font-bold">
+              Ade Prianto
+              <span className="text-pink">.</span>
+            </h1>
+            <h1 className="font-display-medium font-bold">
+              I creating things for the <span className="text-blue">web</span>{" "}
+              and
+              <span className="text-green"> mobile</span>.
+            </h1>
+          </AnimationContainer>
+          <AnimationContainer>
+            <p className="mt-8">
+              I am a versatile software engineer with a strong focus on web and
+              mobile development. My journey in tech has been driven by a love
+              for building efficient, user-friendly applications. Beside
+              development, I am also deeply interested in the field of data
+              science, spending my time learning about machine learning and data
+              analytics.
+            </p>
+          </AnimationContainer>
         </div>
         <div className="col-span-4 mt-8 lg:col-span-3 xl:col-span-4 xl:col-start-8">
-          <TerminalContainer>
-            <div className="h-80">
-              <span
-                id="techstack-terminal"
-                className="font-sf-mono leading-8"
-              />
-            </div>
-          </TerminalContainer>
+          <AnimationContainer width="100%">
+            <TerminalContainer>
+              <div className="h-80">
+                <span
+                  id="techstack-terminal"
+                  className="font-sf-mono leading-8"
+                />
+              </div>
+            </TerminalContainer>
+          </AnimationContainer>
         </div>
       </div>
     </section>

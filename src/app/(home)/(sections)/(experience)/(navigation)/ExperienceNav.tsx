@@ -1,6 +1,7 @@
 "use client";
 
 import ExperienceNavItem from "@src/app/(home)/(sections)/(experience)/(navigation)/ExperienceNavItem";
+import AnimationContainer from "@src/app/components/container/AnimationContainer";
 import useWindowSize from "@src/hooks/useWindowSize";
 import { JobExperience } from "@src/types/JobExperience";
 import classNames from "classnames";
@@ -132,61 +133,63 @@ export default function ExperienceNav({
         "xl:col-span-3 xl:col-start-3",
       ])}
     >
-      <ul
-        className={classNames([
-          "relative",
-          "flex overflow-x-auto font-sf-mono",
-          "lg:overflow-hidden",
-          "lg:flex-col",
-        ])}
-      >
-        <ExperienceNavItem
-          ref={refNavItemFct}
-          selectedJobExperience={selectedJobExperience}
-          setSelectedJobExperience={onExperienceNavItemClick}
-          value={JobExperience.FCT}
+      <AnimationContainer width="100%">
+        <ul
+          className={classNames([
+            "relative",
+            "overflow-x-auto",
+            "flex font-sf-mono",
+            "lg:flex-col lg:overflow-hidden",
+          ])}
         >
-          Five Corner Techno
-        </ExperienceNavItem>
-        <ExperienceNavItem
-          ref={refNavItemDbmpr}
-          selectedJobExperience={selectedJobExperience}
-          setSelectedJobExperience={onExperienceNavItemClick}
-          value={JobExperience.DBMPR}
-        >
-          Dinas Bina Marga dan Penataan Ruang Provinsi Jawa Barat
-        </ExperienceNavItem>
-        <ExperienceNavItem
-          ref={refNavItemSccic}
-          selectedJobExperience={selectedJobExperience}
-          setSelectedJobExperience={onExperienceNavItemClick}
-          value={JobExperience.SCCIC}
-        >
-          Smart City and Community Innovation Center (SCCIC) - ITB
-        </ExperienceNavItem>
-        <ExperienceNavItem
-          ref={refNavItemIndihealth}
-          selectedJobExperience={selectedJobExperience}
-          setSelectedJobExperience={onExperienceNavItemClick}
-          value={JobExperience.INDIHEALTH}
-        >
-          PT. Inditek Global Medika (Indihealth)
-        </ExperienceNavItem>
-        <motion.li
-          className="hidden lg:absolute lg:left-0 lg:z-50 lg:block lg:w-0.5 lg:bg-blue"
-          animate={{
-            height: cursorLeft.height,
-            top: cursorLeft.top,
-          }}
-        ></motion.li>
-        <motion.li
-          className="absolute bottom-0 z-50 h-0.5 bg-blue lg:hidden"
-          animate={{
-            width: cursorBottom.width,
-            left: cursorBottom.left,
-          }}
-        ></motion.li>
-      </ul>
+          <ExperienceNavItem
+            ref={refNavItemFct}
+            selectedJobExperience={selectedJobExperience}
+            setSelectedJobExperience={onExperienceNavItemClick}
+            value={JobExperience.FCT}
+          >
+            Five Corner Techno
+          </ExperienceNavItem>
+          <ExperienceNavItem
+            ref={refNavItemDbmpr}
+            selectedJobExperience={selectedJobExperience}
+            setSelectedJobExperience={onExperienceNavItemClick}
+            value={JobExperience.DBMPR}
+          >
+            Dinas Bina Marga dan Penataan Ruang Provinsi Jawa Barat
+          </ExperienceNavItem>
+          <ExperienceNavItem
+            ref={refNavItemSccic}
+            selectedJobExperience={selectedJobExperience}
+            setSelectedJobExperience={onExperienceNavItemClick}
+            value={JobExperience.SCCIC}
+          >
+            Smart City and Community Innovation Center (SCCIC) - ITB
+          </ExperienceNavItem>
+          <ExperienceNavItem
+            ref={refNavItemIndihealth}
+            selectedJobExperience={selectedJobExperience}
+            setSelectedJobExperience={onExperienceNavItemClick}
+            value={JobExperience.INDIHEALTH}
+          >
+            PT. Inditek Global Medika (Indihealth)
+          </ExperienceNavItem>
+          <motion.li
+            className="hidden lg:absolute lg:left-0 lg:z-50 lg:block lg:w-0.5 lg:bg-blue"
+            animate={{
+              height: cursorLeft.height,
+              top: cursorLeft.top,
+            }}
+          ></motion.li>
+          <motion.li
+            className="absolute bottom-0 z-10 h-0.5 bg-blue lg:hidden"
+            animate={{
+              width: cursorBottom.width,
+              left: cursorBottom.left,
+            }}
+          ></motion.li>
+        </ul>
+      </AnimationContainer>
     </div>
   );
 }

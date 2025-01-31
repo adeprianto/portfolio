@@ -4,10 +4,15 @@ import AdeHamburgerMenu from "@src/app/components/icons/AdeHamburgerMenu";
 import AdeLogo from "@src/app/components/logos/AdeLogo";
 import useScrollPosition from "@src/hooks/useScrollPosition";
 import classNames from "classnames";
+import { motion, useAnimation, useInView } from "framer-motion";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const AdeNavigation: React.FunctionComponent = () => {
+  const navRef = useRef({} as HTMLDivElement);
+  const animationControl = useAnimation();
+  const isInView = useInView(navRef, { once: true });
+
   const [isOnTop, setIsOnTop] = useState(true);
   const [isNavShow, setIsNavShow] = useState(true);
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -15,6 +20,12 @@ const AdeNavigation: React.FunctionComponent = () => {
   const onNavClick = () => {
     setIsNavOpen((val) => !val);
   };
+
+  useEffect(() => {
+    if (isInView) {
+      animationControl.start("visible");
+    }
+  }, [isInView]);
 
   useEffect(() => {
     if (isNavOpen) {
@@ -42,15 +53,25 @@ const AdeNavigation: React.FunctionComponent = () => {
 
   return (
     <div
+      ref={navRef}
       className={classNames([
         "w-full",
-        "fixed left-1/2 top-0 z-50 -translate-x-1/2 transition",
+        "md:overflow-hidden",
+        "left-1/2 -translate-x-1/2",
+        "fixed top-0 z-50 transition",
         !isOnTop && "backdrop-blur-lg",
         !isOnTop && "shadow-md shadow-navigation",
         isNavShow ? "translate-y-0" : "-translate-y-full",
       ])}
     >
-      <div
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: -20 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        transition={{ duration: 0.5 }}
+        initial="hidden"
+        animate={animationControl}
         className={classNames([
           "mx-auto",
           "md:flex md:items-center md:justify-between",
@@ -103,7 +124,7 @@ const AdeNavigation: React.FunctionComponent = () => {
             contact
           </Link>
         </nav>
-      </div>
+      </motion.div>
     </div>
   );
 };

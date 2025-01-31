@@ -19,6 +19,7 @@ const eslintConfig = [
   ),
   {
     rules: {
+      "linebreak-style": ["warn", "windows"],
       "@typescript-eslint/no-unused-vars": [
         "error",
         { argsIgnorePattern: "^_" },

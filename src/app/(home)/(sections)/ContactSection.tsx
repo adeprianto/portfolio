@@ -1,3 +1,4 @@
+import AnimationContainer from "@src/app/components/container/AnimationContainer";
 import classNames from "classnames";
 
 export default function ContactSection() {
@@ -10,24 +11,32 @@ export default function ContactSection() {
       ])}
     >
       <div className="mx-6 text-center">
-        <span className="block font-sf-mono text-title-medium font-bold text-green">
-          04. Contact Me
-        </span>
-        <h1 className="font-display-small mt-8 font-bold">Get In Touch</h1>
-        <p className="mx-auto mt-8 max-w-2xl font-sf-mono">
-          If you want to reach me out, wether it&#39;s to offer new
-          opportunities, or to connect with me, or just want to say hi, my inbox
-          is always open, I&#39;ll do my best to get back to you!
-        </p>
-        <button
-          className={classNames([
-            "mt-12",
-            "inline-block origin-bottom-right rounded border border-green px-8 py-6 font-sf-mono text-green transition duration-300",
-            "hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[4px_4px_#84E296]",
-          ])}
-        >
-          <span>Say Hello</span>
-        </button>
+        <AnimationContainer className="mx-auto">
+          <span className="block font-sf-mono text-title-medium font-bold text-green">
+            04. Contact Me
+          </span>
+        </AnimationContainer>
+        <AnimationContainer className="mx-auto">
+          <h1 className="font-display-small mt-8 font-bold">Get In Touch</h1>
+        </AnimationContainer>
+        <AnimationContainer className="mx-auto">
+          <p className="mx-auto mt-8 max-w-2xl font-sf-mono">
+            If you want to reach me out, wether it&#39;s to offer new
+            opportunities, or to connect with me, or just want to say hi, my
+            inbox is always open, I&#39;ll do my best to get back to you!
+          </p>
+        </AnimationContainer>
+        <AnimationContainer className="mx-auto">
+          <button
+            className={classNames([
+              "mt-12",
+              "inline-block origin-bottom-right rounded border border-green px-8 py-6 font-sf-mono text-green transition duration-300",
+              "hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[4px_4px_#84E296]",
+            ])}
+          >
+            <span>Say Hello</span>
+          </button>
+        </AnimationContainer>
       </div>
     </section>
   );
