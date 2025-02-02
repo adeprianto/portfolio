@@ -1,21 +1,16 @@
-import ExperienceSection from "@src/app/(home)/(sections)/(experience)/ExperienceSection";
-import ProjectSection from "@src/app/(home)/(sections)/(projects)/ProjectSection";
-import AboutSection from "@src/app/(home)/(sections)/AboutSection";
-import ContactSection from "@src/app/(home)/(sections)/ContactSection";
-import HomeSection from "@src/app/(home)/(sections)/HomeSection";
-import AdeFooter from "@src/app/components/footer/AdeFooter";
-import AdeNavigation from "@src/app/components/navigations/AdeNavigation";
+"use client";
+
+import dynamic from "next/dynamic";
+
+const HomePage = dynamic(() => import("@src/app/(home)/HomePage"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex h-screen w-screen items-center justify-center">
+      <img src="/assets/icons/favicon.png" alt="Icon" className="size-32" />
+    </div>
+  ),
+});
 
 export default function Home() {
-  return (
-    <>
-      <AdeNavigation />
-      <HomeSection />
-      <AboutSection />
-      <ExperienceSection />
-      <ProjectSection />
-      <ContactSection />
-      <AdeFooter />
-    </>
-  );
+  return <HomePage />;
 }

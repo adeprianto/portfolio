@@ -1,9 +1,11 @@
 import AnimationContainer from "@src/app/components/container/AnimationContainer";
 import classNames from "classnames";
+import Link from "next/link";
 
 export default function ContactSection() {
   return (
     <section
+      id="contact"
       className={classNames([
         "my-40 xl:my-48 2xl:my-72",
         "w-screen sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl",
@@ -27,7 +29,8 @@ export default function ContactSection() {
           </p>
         </AnimationContainer>
         <AnimationContainer className="mx-auto">
-          <button
+          <Link
+            href="mailto:adeprianto21@gmail.com"
             className={classNames([
               "mt-12",
               "inline-block origin-bottom-right rounded border border-green px-8 py-6 font-sf-mono text-green transition duration-300",
@@ -35,7 +38,7 @@ export default function ContactSection() {
             ])}
           >
             <span>Say Hello</span>
-          </button>
+          </Link>
         </AnimationContainer>
       </div>
     </section>

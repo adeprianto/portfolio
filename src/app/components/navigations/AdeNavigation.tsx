@@ -98,27 +98,71 @@ const AdeNavigation: React.FunctionComponent = () => {
           <Link
             href="/#about-me"
             className="font-sf-mono transition hover:text-pink"
+            onClick={(e) => {
+              e.preventDefault();
+              setIsNavOpen(false);
+              const element = document.getElementById("about-me");
+              if (element != null && typeof window !== undefined) {
+                window.scrollTo({
+                  top: element.offsetTop - 120,
+                  behavior: "smooth",
+                });
+              }
+            }}
           >
             <span className="text-pink">01. </span>
             about me
           </Link>
           <Link
-            href="/#about-me"
+            href="/#experience"
             className="font-sf-mono transition hover:text-yellow"
+            onClick={(e) => {
+              e.preventDefault();
+              setIsNavOpen(false);
+              const element = document.getElementById("experience");
+              if (element != null && typeof window !== undefined) {
+                window.scrollTo({
+                  top: element.offsetTop - 120,
+                  behavior: "smooth",
+                });
+              }
+            }}
           >
             <span className="text-yellow">02. </span>
             experience
           </Link>
           <Link
-            href="/#about-me"
+            href="/#project"
             className="font-sf-mono transition hover:text-blue"
+            onClick={(e) => {
+              e.preventDefault();
+              setIsNavOpen(false);
+              const element = document.getElementById("project");
+              if (element != null && typeof window !== undefined) {
+                window.scrollTo({
+                  top: element.offsetTop - 120,
+                  behavior: "smooth",
+                });
+              }
+            }}
           >
             <span className="text-blue">03. </span>
             project
           </Link>
           <Link
-            href="/#about-me"
+            href="/#contact"
             className="font-sf-mono transition hover:text-green"
+            onClick={(e) => {
+              e.preventDefault();
+              setIsNavOpen(false);
+              const element = document.getElementById("contact");
+              if (element != null && typeof window !== undefined) {
+                window.scrollTo({
+                  top: element.offsetTop - 120,
+                  behavior: "smooth",
+                });
+              }
+            }}
           >
             <span className="text-green">04. </span>
             contact

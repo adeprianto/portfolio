@@ -67,6 +67,7 @@ export default function ExperienceSection() {
 
   return (
     <section
+      id="experience"
       className={classNames([
         "mt-40 xl:mt-56 2xl:mt-72",
         "w-screen sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl",

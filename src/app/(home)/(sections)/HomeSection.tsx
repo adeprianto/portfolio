@@ -1,10 +1,15 @@
 "use client";
 
-import AnimationContainer from "@src/app/components/container/AnimationContainer";
 import TerminalContainer from "@src/app/components/container/TerminalContainer";
 import classNames from "classnames";
+import dynamic from "next/dynamic";
 import { useEffect, useRef } from "react";
 import TypeIt from "typeit";
+
+const AnimationContainer = dynamic(
+  () => import("@src/app/components/container/AnimationContainer"),
+  { ssr: false, loading: () => <div /> },
+);
 
 export default function HomeSection() {
   const typeItInitialized = useRef(false);
@@ -12,80 +17,82 @@ export default function HomeSection() {
 
   useEffect(() => {
     if (!typeItInitialized.current) {
-      typeIt.current = new TypeIt("#techstack-terminal", {
-        speed: 100,
-        loop: true,
-        loopDelay: 5000,
-      })
-        .type("1", {
-          instant: true,
-          delay: 500,
+      setTimeout(() => {
+        typeIt.current = new TypeIt("#techstack-terminal", {
+          speed: 100,
+          loop: true,
+          loopDelay: 5000,
         })
-        .type("&nbsp;&nbsp;&nbsp;&#60;techstack&nbsp;&#47;&#62;<br/>")
-        .type("2", {
-          instant: true,
-          delay: 500,
-        })
-        .type(
-          "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='text-yellow'>&#60;JavaScript&nbsp;&#47;&#62;</span><br/>",
-        )
-        .type("3", {
-          instant: true,
-          delay: 500,
-        })
-        .type(
-          "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='text-blue'>&#60;React&nbsp;&#47;&#62;</span><br/>",
-        )
-        .type("4", {
-          instant: true,
-          delay: 500,
-        })
-        .type(
-          "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='text-green'>&#60;Node.JS&nbsp;&#47;&#62;</span><br/>",
-        )
-        .type("5", {
-          instant: true,
-          delay: 500,
-        })
-        .type(
-          "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='text-yellow'>&#60;PHP&nbsp;&#47;&#62;</span><br/>",
-        )
-        .type("6", {
-          instant: true,
-          delay: 500,
-        })
-        .type(
-          "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='text-pink'>&#60;Laravel&nbsp;&#47;&#62;</span><br/>",
-        )
-        .type("7", {
-          instant: true,
-          delay: 500,
-        })
-        .type(
-          "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='text-green'>&#60;Android&nbsp;&#47;&#62;</span><br/>",
-        )
-        .type("8", {
-          instant: true,
-          delay: 500,
-        })
-        .type(
-          "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='text-blue'>&#60;Flutter&nbsp;&#47;&#62;</span><br/>",
-        )
-        .type("9", {
-          instant: true,
-          delay: 500,
-        })
-        .type(
-          "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='text-yellow'>&#60;Python&nbsp;&#47;&#62;</span><br/>",
-        )
-        .type("10", {
-          instant: true,
-          delay: 500,
-        })
-        .type("&nbsp;&nbsp;&#60;and more...&nbsp;&#47;&#62;", {
-          delay: 5000,
-        })
-        .go();
+          .type("1", {
+            instant: true,
+            delay: 500,
+          })
+          .type("&nbsp;&nbsp;&nbsp;&#60;techstack&nbsp;&#47;&#62;<br/>")
+          .type("2", {
+            instant: true,
+            delay: 500,
+          })
+          .type(
+            "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='text-yellow'>&#60;JavaScript&nbsp;&#47;&#62;</span><br/>",
+          )
+          .type("3", {
+            instant: true,
+            delay: 500,
+          })
+          .type(
+            "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='text-blue'>&#60;React&nbsp;&#47;&#62;</span><br/>",
+          )
+          .type("4", {
+            instant: true,
+            delay: 500,
+          })
+          .type(
+            "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='text-green'>&#60;Node.JS&nbsp;&#47;&#62;</span><br/>",
+          )
+          .type("5", {
+            instant: true,
+            delay: 500,
+          })
+          .type(
+            "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='text-yellow'>&#60;PHP&nbsp;&#47;&#62;</span><br/>",
+          )
+          .type("6", {
+            instant: true,
+            delay: 500,
+          })
+          .type(
+            "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='text-pink'>&#60;Laravel&nbsp;&#47;&#62;</span><br/>",
+          )
+          .type("7", {
+            instant: true,
+            delay: 500,
+          })
+          .type(
+            "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='text-green'>&#60;Android&nbsp;&#47;&#62;</span><br/>",
+          )
+          .type("8", {
+            instant: true,
+            delay: 500,
+          })
+          .type(
+            "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='text-blue'>&#60;Flutter&nbsp;&#47;&#62;</span><br/>",
+          )
+          .type("9", {
+            instant: true,
+            delay: 500,
+          })
+          .type(
+            "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='text-yellow'>&#60;Python&nbsp;&#47;&#62;</span><br/>",
+          )
+          .type("10", {
+            instant: true,
+            delay: 500,
+          })
+          .type("&nbsp;&nbsp;&#60;and more...&nbsp;&#47;&#62;", {
+            delay: 5000,
+          })
+          .go();
+      }, 1000);
 
       typeItInitialized.current = true;
     }
@@ -93,6 +100,7 @@ export default function HomeSection() {
 
   return (
     <section
+      id="home"
       className={classNames([
         "mt-40 xl:mt-0",
         "flex w-screen items-center justify-center sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:min-h-screen xl:max-w-screen-xl 2xl:max-w-screen-2xl",

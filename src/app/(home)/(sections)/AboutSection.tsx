@@ -4,6 +4,7 @@ import classNames from "classnames";
 export default function AboutSection() {
   return (
     <section
+      id="about-me"
       className={classNames([
         "mt-40 xl:mt-1",
         "w-screen sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl",

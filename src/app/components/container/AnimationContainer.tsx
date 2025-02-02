@@ -31,7 +31,7 @@ export default function AnimationContainer({
 
     if (
       showFromBottomWhenViewWidth != null &&
-      window !== undefined &&
+      typeof window !== undefined &&
       window.innerWidth < showFromBottomWhenViewWidth
     ) {
       x = 0;

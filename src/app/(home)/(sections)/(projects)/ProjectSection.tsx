@@ -1,10 +1,18 @@
+"use client";
+
 import ItemProject from "@src/app/(home)/(sections)/(projects)/ItemProject";
-import AnimationContainer from "@src/app/components/container/AnimationContainer";
 import classNames from "classnames";
+import dynamic from "next/dynamic";
+
+const AnimationContainer = dynamic(
+  () => import("@src/app/components/container/AnimationContainer"),
+  { ssr: false },
+);
 
 export default function ProjectSection() {
   return (
     <section
+      id="project"
       className={classNames([
         "mt-40 xl:mt-56 2xl:mt-72",
         "w-screen sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl",
